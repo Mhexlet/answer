@@ -11,3 +11,10 @@ def objections(request):
     return render(request, 'objection/objections.html', {
         'random_objection': random_objection
     })
+
+def objectionsAll(request):
+
+    objection = Objections.objects.all()
+    return render(request, 'objection/objections_all.html', {
+        'random_objection': objection
+    })
